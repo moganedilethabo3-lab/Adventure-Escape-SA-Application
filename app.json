@@ -1,0 +1,47 @@
+{
+  "expo": {
+    "name": "Adventure_EscapeSA",
+    "slug": "Adventure_EscapeSA",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/images/app_images/company logo.png",
+    "scheme": "adventureescapesa",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "icon": "./assets/images/images/app_images/company logo.png"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#9fb6a2",
+        "foregroundImage": "./assets/images/images/app_images/company logo.png",
+        "backgroundImage": "./assets/images/android-icon-background.png",
+        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "output": "static",
+      "favicon": "./assets/images/app_images/company logo.png"
+    },
+    "splash": {
+      "image": "./assets/images/images/app_images/company logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#9fb6a2"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#208AEF",
+          "image": "./assets/images/images/app_images/company logo.png",
+          "imageWidth": 76
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    }
+  }
+}
