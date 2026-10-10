@@ -20,7 +20,7 @@ export default function Index() {
         </Pressable>
        
        <Pressable onPress={()=>{router.push("/personalize")}}>
-            <Text style={styles.screenText}> Personalize</Text>
+            <Text style={styles.screenText}> Bookings</Text>
         </Pressable>
       </View>
 

@@ -74,9 +74,9 @@ export default function RootLayout() {
     />
 
     <Stack.Screen
-    name="personalize"
+    name="accomodation"
     options={{
-      title: 'personalize'
+      title: 'accomodation'
     } }
     />
 
