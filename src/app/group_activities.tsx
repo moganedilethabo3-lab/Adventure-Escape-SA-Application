@@ -31,9 +31,16 @@ export default function Index() {
            style={styles.packageImage}
            resizeMode="contain"
                        />
-           
+             <View style={styles.align}>
              <Text style={styles.packageText}> Ultimate Adventure Day</Text>
-                       
+              <Text style={styles.packageText}> Fee: R1500</Text>
+             <Text style={styles.packageText}> Package includes the following:</Text>
+              <Text style={styles.packageText}> Guided Hiking</Text>
+              <Text style={styles.packageText}> Ziplining</Text>
+              <Text style={styles.packageText}> Kayaking</Text>
+              <Text style={styles.packageText}> Lunch</Text>
+              <Text style={styles.packageText}> Safety Brief </Text>
+              </View>         
               </View>
               <View style={styles.packageRow}>
                   <Image
@@ -42,7 +49,16 @@ export default function Index() {
                          resizeMode="contain"
                        />
            
-                 <Text style={styles.packageText}> Mountain Adventure Package</Text>
+                        <View style={styles.align}>
+                       <Text style={styles.packageText}>Mountain Adventure Package  </Text>
+                         <Text style={styles.packageText}> Fee: R1500</Text>
+                         <Text style={styles.packageText}> Package includes the following:</Text>
+                        <Text style={styles.packageText}> Mountain hiking</Text>
+                        <Text style={styles.packageText}> Sun Set Watching </Text>
+                         <Text style={styles.packageText}> Rock scrambling</Text>
+                           <Text style={styles.packageText}> Wildlife guide</Text>
+                       <Text style={styles.packageText}> Safety Brief on equipment</Text>
+                       </View>
                        
                   </View>
            
@@ -53,7 +69,16 @@ export default function Index() {
                          resizeMode="contain"
                        />
            
-                       <Text style={styles.packageText}> Family Explorer Package</Text>
+                       <View style={styles.align}>
+                       <Text style={styles.packageText}>Family Explore Package  </Text>
+                         <Text style={styles.packageText}> Fee: R150o</Text>
+                         <Text style={styles.packageText}> Package includes the following:</Text>
+                        <Text style={styles.packageText}> Nature Walk</Text>
+                        <Text style={styles.packageText}> Obstacle Course</Text>
+                         <Text style={styles.packageText}> Family games</Text>
+                           <Text style={styles.packageText}> Guide during WildLife spotting</Text>
+                       <Text style={styles.packageText}> Safety Brief </Text>
+                       </View>
                        
                      </View>
            
@@ -66,10 +91,19 @@ export default function Index() {
                         style={styles.packageImage}
                          resizeMode="contain"
                        />
-           
+
+                       <View style={styles.align}>
                        <Text style={styles.packageText}>Ultimate Adventure Day  </Text>
-                       
-                     </View>
+                       <Text style={styles.packageText}> Fee: R1500</Text>
+                         <Text style={styles.packageText}> Package includes the following:</Text>
+                        <Text style={styles.packageText}> Guided Hiking</Text>
+                        <Text style={styles.packageText}> Ziplining</Text>
+                         <Text style={styles.packageText}> Kayaking</Text>
+                           <Text style={styles.packageText}> Lunch</Text>
+                       <Text style={styles.packageText}> Safety Brief </Text>
+                      </View>
+                      
+                      </View>
 
                      <View style={styles.packageRow}>
                        <Image
@@ -77,9 +111,17 @@ export default function Index() {
                         style={styles.packageImage}
                          resizeMode="contain"
                        />
-           
+
+                       <View style={styles.align}>
                        <Text style={styles.packageText}>Family Explore Package  </Text>
-                       
+                         <Text style={styles.packageText}> Fee: R150o</Text>
+                         <Text style={styles.packageText}> Package includes the following:</Text>
+                        <Text style={styles.packageText}> Nature Walk</Text>
+                        <Text style={styles.packageText}> Obstacle Course</Text>
+                         <Text style={styles.packageText}> Family games</Text>
+                           <Text style={styles.packageText}> Guide during WildLife spotting</Text>
+                       <Text style={styles.packageText}> Safety Brief </Text>
+                       </View>
                      </View>
 
                      <Text style={styles.subLocation}>Johannesburg </Text>
@@ -91,8 +133,16 @@ export default function Index() {
                          resizeMode="contain"
                        />
            
-                       <Text style={styles.packageText}> Corporate Team Challenege</Text>
-                       
+                       < View style={styles.align}>
+                       <Text style={styles.packageText}>Corporate Team Challeneg  </Text>
+                         <Text style={styles.packageText}> Fee: R1500</Text>
+                         <Text style={styles.packageText}> Package includes the following:</Text>
+                        <Text style={styles.packageText}> Team obstacle course</Text>
+                        <Text style={styles.packageText}> Orienteering challeneg </Text>
+                         <Text style={styles.packageText}> Raft building</Text>
+                           <Text style={styles.packageText}> Team Awards</Text>
+                       <Text style={styles.packageText}> Leadership bootcamp</Text>
+                       </View>
                      </View>
            
                      <View style={styles.packageRow}>
@@ -102,7 +152,16 @@ export default function Index() {
                          resizeMode="contain"
                        />
            
-                       <Text style={styles.packageText}> Family Explorer Package</Text>
+                       <View style={styles.align}>
+                       <Text style={styles.packageText}>Family Explore Package  </Text>
+                         <Text style={styles.packageText}> Fee: R150o</Text>
+                         <Text style={styles.packageText}> Package includes the following:</Text>
+                        <Text style={styles.packageText}> Nature Walk</Text>
+                        <Text style={styles.packageText}> Obstacle Course</Text>
+                         <Text style={styles.packageText}> Family games</Text>
+                           <Text style={styles.packageText}> Guide during WildLife spotting</Text>
+                       <Text style={styles.packageText}> Safety Brief </Text>
+                       </View>
                        
                      </View>
            
@@ -116,7 +175,16 @@ export default function Index() {
                          resizeMode="contain"
                        />
            
-                       <Text style={styles.packageText}> Mountain Adventure Package</Text>
+                       <View style={styles.align}>
+                       <Text style={styles.packageText}>Mountain Adventure Package  </Text>
+                         <Text style={styles.packageText}> Fee: R1500</Text>
+                         <Text style={styles.packageText}> Package includes the following:</Text>
+                        <Text style={styles.packageText}> Mountain hiking</Text>
+                        <Text style={styles.packageText}> Sun Set Watching </Text>
+                         <Text style={styles.packageText}> Rock scrambling</Text>
+                           <Text style={styles.packageText}> Wildlife guide</Text>
+                       <Text style={styles.packageText}> Safety Brief on equipment</Text>
+                       </View>
                        
                      </View>
 
@@ -129,7 +197,16 @@ export default function Index() {
                          resizeMode="contain"
                        />
            
-                       <Text style={styles.packageText}> Ultimate Adventure Day</Text>
+                       <View style={styles.align}>
+                       <Text style={styles.packageText}>Ultimate Adventure Day  </Text>
+                       <Text style={styles.packageText}> Fee: R1500</Text>
+                         <Text style={styles.packageText}> Package includes the following:</Text>
+                        <Text style={styles.packageText}> Guided Hiking</Text>
+                        <Text style={styles.packageText}> Ziplining</Text>
+                         <Text style={styles.packageText}> Kayaking</Text>
+                           <Text style={styles.packageText}> Lunch</Text>
+                       <Text style={styles.packageText}> Safety Brief </Text>
+                      </View>
                        
                      </View>
            
@@ -143,7 +220,16 @@ export default function Index() {
                          resizeMode="contain"
                        />
            
-                       <Text style={styles.packageText}> Corporate Team Challenge </Text>
+                       < View style={styles.align}>
+                       <Text style={styles.packageText}>Corporate Team Challeneg  </Text>
+                         <Text style={styles.packageText}> Fee: R1500</Text>
+                         <Text style={styles.packageText}> Package includes the following:</Text>
+                        <Text style={styles.packageText}> Team obstacle course</Text>
+                        <Text style={styles.packageText}> Orienteering challeneg </Text>
+                         <Text style={styles.packageText}> Raft building</Text>
+                           <Text style={styles.packageText}> Team Awards</Text>
+                       <Text style={styles.packageText}> Leadership bootcamp</Text>
+                       </View>
                        
                      </View>
                        
@@ -303,5 +389,12 @@ export default function Index() {
        width:"100%",
         paddingHorizontal:20
       },
+       align:{
+    flexDirection: "column",
+    textAlign:"center",
+    width: "90%",
+    lineHeight: 20,
+    
+  },
 
     });

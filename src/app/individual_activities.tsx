@@ -31,8 +31,16 @@ export default function Index() {
               resizeMode="contain"
             />
 
+            <View style={styles.align}>
             <Text style={styles.packageText}> Ziplining Adventure </Text>
-            
+           
+            <Text style={styles.packageText}> Fee: R750</Text>
+            <Text style={styles.packageText}> Package includes the following:</Text>
+            <Text style={styles.packageText}> Safety Briefying</Text>
+            <Text style={styles.packageText}> Professional instrucors</Text>
+            <Text style={styles.packageText}> Safety Equipment Hires</Text>
+          
+          </View>
           </View>
           <View style={styles.packageRow}>
             <Image
@@ -41,8 +49,14 @@ export default function Index() {
               resizeMode="contain"
             />
 
+             <View style={styles.align}>
             <Text style={styles.packageText}> Kayaking Experience </Text>
-            
+            <Text style={styles.packageText}> Fee: R750</Text>
+            <Text style={styles.packageText}> Package includes the following:</Text>
+            <Text style={styles.packageText}> Kayak and Paddle purchases</Text>
+            <Text style={styles.packageText}> Guided route to kayak</Text>
+            <Text style={styles.packageText}> Safety Equipment Hires</Text>
+            </View>
           </View>
 
            <View style={styles.packageRow}>
@@ -52,8 +66,16 @@ export default function Index() {
               resizeMode="contain"
             />
 
+             <View style={styles.align}>
             <Text style={styles.packageText}> Rock Climbing Session </Text>
+              <Text style={styles.packageText}> Fee: R750</Text>
+            <Text style={styles.packageText}> Package includes the following:</Text>
+            <Text style={styles.packageText}> Climbing equipment</Text>
+            <Text style={styles.packageText}> Safety Instructor</Text>
+            <Text style={styles.packageText}> Professional rock climbing guides</Text>
             
+            
+            </View>
           </View>
 
            <Text style={styles.LocationHeading}> Gauteng </Text>
@@ -66,8 +88,14 @@ export default function Index() {
               resizeMode="contain"
             />
 
+             <View style={styles.align}>
             <Text style={styles.packageText}> Ziplining Adventure </Text>
-            
+            <Text style={styles.packageText}> Fee: R750</Text>
+            <Text style={styles.packageText}> Package includes the following:</Text>
+            <Text style={styles.packageText}> Safety Briefying</Text>
+            <Text style={styles.packageText}> Professional instrucors</Text>
+            <Text style={styles.packageText}> Safety Equipment Hires</Text>
+          </View>
           </View>
 
           <View style={styles.packageRow}>
@@ -77,8 +105,15 @@ export default function Index() {
               resizeMode="contain"
             />
 
+             <View style={styles.align}>
             <Text style={styles.packageText}> Rock Climbing Session </Text>
-            
+             <Text style={styles.packageText}> Fee: R750</Text>
+            <Text style={styles.packageText}> Package includes the following:</Text>
+            <Text style={styles.packageText}> Climbing equipment</Text>
+            <Text style={styles.packageText}> Safety Instructor</Text>
+            <Text style={styles.packageText}> Professional rock climbing guides</Text>
+            </View>
+
           </View>
 
            <Text style={styles.LocationHeading}> Mpumalanga</Text>
@@ -91,8 +126,15 @@ export default function Index() {
               resizeMode="contain"
             />
 
+             <View style={styles.align}>
             <Text style={styles.packageText}> Rock Climbing Session</Text>
-            
+             <Text style={styles.packageText}> Fee: R750</Text>
+            <Text style={styles.packageText}> Package includes the following:</Text>
+            <Text style={styles.packageText}> Climbing equipment</Text>
+            <Text style={styles.packageText}> Safety Instructor</Text>
+            <Text style={styles.packageText}> Professional rock climbing guides</Text>
+            </View>
+
           </View>
 
            <Text style={styles.LocationHeading}> KwaZulu Natal</Text>
@@ -105,7 +147,14 @@ export default function Index() {
               resizeMode="contain"
             />
 
+             <View style={styles.align}>
             <Text style={styles.packageText}> Kayaking Experience </Text>
+              <Text style={styles.packageText}> Fee: R750</Text>
+            <Text style={styles.packageText}> Package includes the following:</Text>
+            <Text style={styles.packageText}> Kayak and Paddle purchases</Text>
+            <Text style={styles.packageText}> Guided route to kayak</Text>
+            <Text style={styles.packageText}> Safety Equipment Hires</Text>
+            </View>
             
           </View>
             
@@ -271,5 +320,12 @@ const styles = StyleSheet.create({
  width:"100%",
  paddingHorizontal:20,
 
+  },
+   align:{
+    flexDirection: "column",
+    textAlign:"center",
+    width: "90%",
+    lineHeight: 20,
+    
   },
 });

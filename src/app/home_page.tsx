@@ -19,7 +19,7 @@ export default function Index() {
             <Text style={styles.screenText}> Gallery</Text>
         </Pressable>
        
-       <Pressable onPress={()=>{router.push("/personalize")}}>
+       <Pressable onPress={()=>{router.push("/bookings")}}>
             <Text style={styles.screenText}> Bookings</Text>
         </Pressable>
       </View>
