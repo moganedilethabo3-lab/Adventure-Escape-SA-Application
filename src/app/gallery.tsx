@@ -25,7 +25,7 @@ export default function Index() {
                 
                   <View>
                   <Image
-                   source={require('@/assets/images/app_images/cape town.jpg')}
+                   source={require('@/assets/images/app_images/gallery.jpg')}
                    style={styles.locationImage}
                     resizeMode="contain"
                     />
@@ -34,7 +34,7 @@ export default function Index() {
                 
                   <View>
                   <Image
-                   source={require('@/assets/images/app_images/pretoria.jpg')}
+                   source={require('@/assets/images/app_images/gallery(1).jpg')}
                     style={styles.locationImage}
                    resizeMode="contain"
                    />
@@ -43,7 +43,7 @@ export default function Index() {
                 
                   <View>
                    <Image
-                   source={require('@/assets/images/app_images/durban.jpg')}
+                   source={require('@/assets/images/app_images/gallery(2).jpg')}
                   style={styles.locationImage}
                    resizeMode="contain"
                     />
@@ -55,7 +55,7 @@ export default function Index() {
                 
                   <View>
                   <Image
-                   source={require('@/assets/images/app_images/cape town.jpg')}
+                   source={require('@/assets/images/app_images/gallery(3).jpg')}
                    style={styles.locationImage}
                     resizeMode="contain"
                     />
@@ -64,7 +64,7 @@ export default function Index() {
                 
                   <View>
                   <Image
-                   source={require('@/assets/images/app_images/pretoria.jpg')}
+                   source={require('@/assets/images/app_images/gallery(4).jpg')}
                     style={styles.locationImage}
                    resizeMode="contain"
                    />
@@ -73,7 +73,7 @@ export default function Index() {
                 
                   <View>
                    <Image
-                   source={require('@/assets/images/app_images/durban.jpg')}
+                   source={require('@/assets/images/app_images/gallery(5).jpg')}
                   style={styles.locationImage}
                    resizeMode="contain"
                     />
@@ -85,7 +85,7 @@ export default function Index() {
                 
                   <View>
                   <Image
-                   source={require('@/assets/images/app_images/cape town.jpg')}
+                   source={require('@/assets/images/app_images/gallery(6).jpg')}
                    style={styles.locationImage}
                     resizeMode="contain"
                     />
@@ -94,7 +94,7 @@ export default function Index() {
                 
                   <View>
                   <Image
-                   source={require('@/assets/images/app_images/pretoria.jpg')}
+                   source={require('@/assets/images/app_images/gallery(7).jpg')}
                     style={styles.locationImage}
                    resizeMode="contain"
                    />
@@ -103,7 +103,7 @@ export default function Index() {
                 
                   <View>
                    <Image
-                   source={require('@/assets/images/app_images/durban.jpg')}
+                   source={require('@/assets/images/app_images/gallery(8).jpg')}
                   style={styles.locationImage}
                    resizeMode="contain"
                     />
@@ -115,7 +115,7 @@ export default function Index() {
                 
                   <View>
                   <Image
-                   source={require('@/assets/images/app_images/cape town.jpg')}
+                   source={require('@/assets/images/app_images/gallery(9).jpg')}
                    style={styles.locationImage}
                     resizeMode="contain"
                     />
@@ -124,7 +124,7 @@ export default function Index() {
                 
                   <View>
                   <Image
-                   source={require('@/assets/images/app_images/pretoria.jpg')}
+                   source={require('@/assets/images/app_images/gallery(10).jpg')}
                     style={styles.locationImage}
                    resizeMode="contain"
                    />
@@ -133,7 +133,7 @@ export default function Index() {
                 
                   <View>
                    <Image
-                   source={require('@/assets/images/app_images/durban.jpg')}
+                   source={require('@/assets/images/app_images/gallery(11).jpg')}
                   style={styles.locationImage}
                    resizeMode="contain"
                     />
