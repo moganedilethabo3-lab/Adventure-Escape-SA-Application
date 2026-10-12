@@ -2,10 +2,20 @@ import { Text, View, StyleSheet, ScrollView, Image, Pressable, TextInput} from "
 import { router } from "expo-router";
 import {Picker} from "@react-native-picker/picker"
 import {Alert} from "react-native"
-import AsyncStorage from "@react-native-async-storage/async-storage";
 import {useState} from "react"
 
 export default function Index() {
+
+  
+const [quotation, setQuotation] = useState<null | {
+  subtotal: number;
+  discountRate: number;
+  discountAmount: number;
+  amountBeforeVAT: number;
+  vat: number;
+  total: number;
+}>(null);
+
   const [customerName, setcustomerName] = useState("");
     const [numberPeople,setnumberPople]= useState("");
     const [catergorySelected, setcatergorySelected] = useState("");
@@ -13,9 +23,9 @@ export default function Index() {
     const[customerNumber,setcustomerNumber]= useState("");
     const[packagePrice,setpackagePrice]= useState("");
   
-    const saveBooking = async() =>{
+    const calculateQuotation = () =>{
     
-        if (!customerName || !numberPeople || !catergorySelected|| !customerAddress || !customerNumber || !packagePrice ){
+        if (!customerName.trim() || !numberPeople.trim() || !catergorySelected|| !customerAddress.trim() || !customerNumber.trim() || !packagePrice ){
         Alert.alert(
         "Missing Booking Information",
         "Please complete all field before saving your bookings."
@@ -24,39 +34,45 @@ export default function Index() {
 
          return;
     }
-    try{
-    const newQuotation ={
-    id:Date.now().toString(),
-    customerName: customerName,
-    customerAddress: customerAddress,
-    customerNumber: customerNumber,
-    catergorySelected: catergorySelected,
-    packagePrice: packagePrice,
-    numberPeople: numberPeople,
-     
-     };
-      const existingQuotation =
-      await AsyncStorage.getItem("quotation");
-      const quotation =existingQuotation
-      ? JSON.parse(existingQuotation): [];
-      quotation.push(newQuotation);
-      await AsyncStorage.setItem(
-  
-      "bookings",
-        JSON.stringify(quotation)
+    const price =Number(packagePrice);
+    const people =Number(numberPeople)
+
+    if(
+      !Number.isFinite(price)||price <=0||
+      !Number.isInteger(people)||people <1
+    ){
+      Alert.alert(
+        "Invalid Information", "Please select a valid package price and a whole number of people"
       );
-        
-      Alert.alert("Success", "Booking saved successfully onto system!" );
-       
-      router.replace("/quotation");
+      return;
+    }
+
+    const subtotal = (price * people)
+    let discountRate = 0;
+    if(people >4 ){
+      discountRate= 0.15;}
+      else if (people ==3){
+        discountRate = 0.10;}
+        else if (people == 2){
+          discountRate =0.05;}
+
+          const discountAmount =subtotal* discountRate;
+          const amountBeforeVAT =subtotal -discountAmount;
+          const vat =amountBeforeVAT *0.15;
+          const total =amountBeforeVAT +vat;
+        setQuotation({
+        subtotal,
+         discountRate,
+        discountAmount,
+        amountBeforeVAT,
+        vat,
+       total,
+
+        });
+      };
+    
 
 
-    }
-    catch (error){
-    console.error("Error saving booking:",error);
-      Alert.alert("Error","The booking could not be saved");
-    }
-  };
 
   return (
            <ScrollView style={styles.container}
@@ -98,20 +114,23 @@ export default function Index() {
             placeholder="Enter your Name"/>
 
             <Text style={styles.label}>
-             Name of Customer
+             Customer Email Adress
             </Text>
             <TextInput style={styles.input} 
              value={customerAddress}
              onChangeText={setcustomerAddress} 
-            placeholder="Enter your Email Adress"/>
+            placeholder="Enter your Email Adress"
+            autoCapitalize="none"
+            keyboardType="email-address"/>
 
             <Text style={styles.label}>
-             Name of Customer
+             Customer phone Number
             </Text>
             <TextInput style={styles.input} 
              value={customerNumber}
              onChangeText={setcustomerNumber} 
-            placeholder="Enter your Phone Number"/>
+            placeholder="Enter your Phone Number"
+            keyboardType="phone-pad"/>
 
              <Text style={styles.label}>
              Number of Bookings
@@ -119,7 +138,8 @@ export default function Index() {
             <TextInput style={styles.input} 
              value={numberPeople}
              onChangeText={setnumberPople} 
-            placeholder="Enter number of bookings"/>
+            placeholder="Enter number of bookings"
+            keyboardType="number-pad"/>
                
               <View>
                <Text style={styles.label}>
@@ -140,34 +160,97 @@ export default function Index() {
                 </Picker>
 
                 <Text style={styles.label}>
-               Package Price
+               Package Price 
                </Text>
               <Picker style={styles.dropDown}
                selectedValue={packagePrice}
               onValueChange={(itemValue, itemIndex) =>
               setpackagePrice(itemValue)
                }>
-                <Picker.Item label="R750" value="Individual Booking" />
-                <Picker.Item label="R1500" value="Group Booking" />
+                <Picker.Item label="Select a Price" value="" />
+                <Picker.Item label="R750" value="750" />
+                <Picker.Item label="R1500" value="1500" />
                </Picker>
+
+               <View style={styles.buttonAlign}>
+            
+             <Pressable style={styles.button}
+             onPress={calculateQuotation} >
+                    
+              <Text style={styles.text} >
+              Calculate Quotation
+               </Text>
+                    
+              </Pressable>
+               </View>
               
             </View>
             </View>
 
             <Text style={styles.subHeading}> Customer Quotation</Text>
 
-            <View style={styles.buttonOrder}>
-            <View style={styles.buttonAlign}>
             
-             <Pressable style={styles.button}
-             onPress={saveBooking} >
-                    
-              <Text style={styles.text} >
-              Calculate
-               </Text>
-                    
-              </Pressable>
-               </View>
+{quotation !== null && (
+  <View style={styles.quotationContainer}>
+    <Text style={styles.quotationHeading}>
+      Your Quotation
+    </Text>
+
+    <Text style={styles.resultText}>
+      Selected Package: {catergorySelected}
+    </Text>
+
+    <Text style={styles.resultText}>
+      Number of People: {numberPeople}
+    </Text>
+
+    <Text style={styles.resultText}>
+      Price Per Person: R{Number(packagePrice).toFixed(2)}
+    </Text>
+
+    <View style={styles.resultRow}>
+      <Text style={styles.resultText}>Subtotal:</Text>
+      <Text style={styles.resultText}>
+        R{quotation.subtotal.toFixed(2)}
+      </Text>
+    </View>
+
+    <View style={styles.resultRow}>
+      <Text style={styles.resultText}>
+        Group Discount ({quotation.discountRate * 100}%):
+      </Text>
+      <Text style={styles.resultText}>
+        -R{quotation.discountAmount.toFixed(2)}
+      </Text>
+    </View>
+
+    <View style={styles.resultRow}>
+      <Text style={styles.resultText}>Amount before VAT:</Text>
+      <Text style={styles.resultText}>
+        R{quotation.amountBeforeVAT.toFixed(2)}
+      </Text>
+    </View>
+
+    <View style={styles.resultRow}>
+      <Text style={styles.resultText}>VAT (15%):</Text>
+      <Text style={styles.resultText}>
+        R{quotation.vat.toFixed(2)}
+      </Text>
+    </View>
+
+    <View style={styles.resultRow}>
+      <Text style={styles.totalText}>Total Quotation:</Text>
+      <Text style={styles.totalText}>
+        R{quotation.total.toFixed(2)}
+      </Text>
+    </View>
+  </View>
+)}
+
+
+
+            <View style={styles.buttonOrder}>
+            
 
          <View style={styles.buttonAlign}>
           <Pressable onPress={()=> {router.push("/home_page")}}
@@ -290,13 +373,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     backgroundColor:"#d8e2dc",
   },
-   button:{
-    marginTop:105,
-    borderRadius: 15,
-    paddingHorizontal: 85,
-    paddingVertical: 8,
-    backgroundColor: "#31241f",
-  },
+   
   buttonAlign:{
     justifyContent:"center",
     alignItems: "center",
@@ -319,4 +396,55 @@ const styles = StyleSheet.create({
     color:"white",
     fontWeight:"bold",
   },
+  
+quotationContainer: {
+  width: "100%",
+  backgroundColor: "#ffffff",
+  borderWidth: 1,
+  borderColor: "#354933",
+  borderRadius: 12,
+  padding: 16,
+  marginTop: 10,
+  marginBottom: 20,
+},
+
+quotationHeading: {
+  fontSize: 24,
+  fontWeight: "bold",
+  textAlign: "center",
+  color: "#354933",
+  marginBottom: 16,
+},
+
+resultRow: {
+  flexDirection: "row",
+  justifyContent: "space-between",
+  alignItems: "center",
+  gap: 12,
+  marginTop: 10,
+},
+
+resultText: {
+  flex: 1,
+  fontSize: 16,
+  color: "#58433b",
+},
+
+totalText: {
+  flex: 1,
+  fontSize: 18,
+  fontWeight: "bold",
+  color: "#354933",
+  marginTop: 12,
+},
+
+button: {
+  alignSelf: "center",
+  marginTop: 16,
+  borderRadius: 15,
+  paddingHorizontal: 30,
+  paddingVertical: 12,
+  backgroundColor: "#31241f",
+},
+
 });
