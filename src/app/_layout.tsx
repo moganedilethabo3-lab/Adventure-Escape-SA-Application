@@ -39,6 +39,13 @@ export default function RootLayout() {
     />
 
     <Stack.Screen
+    name="customer_booking"
+    options={{
+      title: 'customer_booking'
+    } }
+    />
+
+    <Stack.Screen
     name="individual_activities"
     options={{
       title: 'individual_activities'

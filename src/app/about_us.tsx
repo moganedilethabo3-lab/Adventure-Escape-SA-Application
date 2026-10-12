@@ -80,7 +80,18 @@ export default function Index() {
         resizeMode="contain"
         /> 
       </View>
-
+<View style={styles.buttonOrder}>
+      
+      <View style={styles.buttonAlign}>
+      <Pressable onPress={()=> {router.push("/overview")}}
+        style={styles.button}>
+        <Text style={styles.buttonText}>
+          OverView 
+        </Text>
+       
+      </Pressable>
+      
+      </View>
       <View style={styles.buttonAlign}>
       <Pressable onPress={()=> {router.push("/home_page")}}
         style={styles.button}>
@@ -90,6 +101,7 @@ export default function Index() {
        
       </Pressable>
       
+      </View>
       </View>
 
       </View>
@@ -224,6 +236,14 @@ const styles = StyleSheet.create({
     marginBottom: 0,
     color: "#58433B",
     justifyContent:"center",
+  },
+   buttonOrder:{
+ flexDirection:"column",
+ alignItems:"center",
+ gap: 30,
+ width:"100%",
+ paddingHorizontal:20,
+
   },
   button:{
     marginTop:10,

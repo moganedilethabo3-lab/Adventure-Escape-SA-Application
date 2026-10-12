@@ -43,7 +43,7 @@ export default function Index() {
                 
                   <View>
                    <Image
-                   source={require('@/assets/images/app_images/gallery(2).jpg')}
+                   source={require('@/assets/images/app_images/gallery(13).jpg')}
                   style={styles.locationImage}
                    resizeMode="contain"
                     />
@@ -141,8 +141,19 @@ export default function Index() {
                    </View>
                   </View>
               
-    
+    <View style={styles.buttonOrder}> 
              <View style={styles.buttonAlign}>
+              <Pressable onPress={()=> {router.push("/bookings")}}
+              style={styles.button}>
+              <Text style={styles.buttonText}>
+              Book Today!
+              </Text>
+                                                     
+              </Pressable>
+                                                    
+              </View> 
+
+              <View style={styles.buttonAlign}>
               <Pressable onPress={()=> {router.push("/home_page")}}
               style={styles.button}>
               <Text style={styles.buttonText}>
@@ -152,6 +163,7 @@ export default function Index() {
               </Pressable>
                                                     
               </View> 
+              </View>
           </View>
         </ScrollView>
       );
@@ -196,6 +208,14 @@ export default function Index() {
         marginBottom:15,
         color:"#354933"
       },
+      buttonOrder:{
+      flexDirection:"column",
+       alignItems:"center",
+        gap: 30,
+        width:"100%",
+        paddingHorizontal:20,
+
+       },
        button:{
         marginTop:105,
         borderRadius: 15,
@@ -207,7 +227,7 @@ export default function Index() {
         justifyContent:"center",
         alignItems: "center",
          width:"100%",
-        height:20,
+       height:35,
         
       },
       buttonText:{

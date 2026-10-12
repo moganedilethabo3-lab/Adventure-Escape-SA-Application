@@ -1,5 +1,4 @@
 import { Text, View, StyleSheet, Pressable, Image, ScrollView,TextInput} from "react-native";
-import React from "react"
 import {Picker} from "@react-native-picker/picker"
 import {router} from "expo-router"
 import {Alert} from "react-native"
@@ -29,13 +28,13 @@ export default function Index() {
     const newBooking ={
     id:Date.now().toString(),
     selectedCatergory:selectedCatergory,
-    PackageName: packageName,
+    packageName: packageName,
     escapeLocation:escapeLocation,
     bookingNumber:bookingNumber,
      
      };
       const existingBooking =
-      await AsyncStorage.getItem("booking");
+      await AsyncStorage.getItem("bookings");
       const booking =existingBooking
       ? JSON.parse(existingBooking): [];
       booking.push(newBooking);
@@ -53,13 +52,13 @@ export default function Index() {
     }
     catch (error){
     console.error("Error saving booking:",error);
-      Alert.alert("Error","The booking could not be saved");
+      Alert.alert("Booking Error","The booking could not be saved, Please try again");
     }
   };
 
   return (
     <ScrollView style={styles.container}
-                   contentContainerStyle={styles.contentContainer}>
+     contentContainerStyle={styles.contentContainer}>
            
                    
       <Image
@@ -83,6 +82,7 @@ export default function Index() {
             onValueChange={(itemValue, itemIndex) =>
             setSelectedCatergory(itemValue)
             }>
+              <Picker.Item label="Select booking catergory" value="" />
            <Picker.Item label="Individual Booking" value="Individual Booking" />
             <Picker.Item label="Group Booking" value="Group Booking" />
           </Picker>
@@ -95,6 +95,8 @@ export default function Index() {
             onValueChange={(itemValue, itemIndex) =>
             setpackageName(itemValue)
             }>
+
+              <Picker.Item label="Select Escape package" value="" />
            <Picker.Item label="Zipling Adventure" value="Ziplining Adventure" />
             <Picker.Item label="Kayaking Experience" value="Kayaking Experience" />
             <Picker.Item label="Rock Climbing Session" value="Rock Climbing Session" />
@@ -112,11 +114,13 @@ export default function Index() {
             onValueChange={(itemValue, itemIndex) =>
             setescapeLocation(itemValue)
             }>
-           <Picker.Item label="Cape Town" value="Western Cape" />
-            <Picker.Item label="Pretoria" value="Gauteng" />
-            <Picker.Item label="Johannesburg" value="Gauteng" />
-            <Picker.Item label="Durban" value="KwaZulu Natal" />
-            <Picker.Item label="Drakensburg" value="Mpumalanga" />
+
+              <Picker.Item label="Select Escape Location" value="" />
+           <Picker.Item label="Cape Town" value="Cape Town" />
+            <Picker.Item label="Pretoria" value="Pretoria" />
+            <Picker.Item label="Johannesburg" value="Johannesburg" />
+            <Picker.Item label="Durban" value="Durban" />
+            <Picker.Item label="Drakensburg" value="Drakensburg" />
           </Picker>
             
           
@@ -141,7 +145,7 @@ export default function Index() {
       onPress={saveBooking} >
         
           <Text style={styles.text} >
-          Save Dish to Menu
+          Save Booking
            </Text>
         
       </Pressable>
@@ -211,7 +215,7 @@ const styles = StyleSheet.create({
     justifyContent:"center",
     alignItems: "center",
      width:"100%",
-    height:20,
+    height:50,
     
   },
   buttonText:{

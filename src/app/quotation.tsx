@@ -249,8 +249,19 @@ const [quotation, setQuotation] = useState<null | {
 
 
 
-            <View style={styles.buttonOrder}>
             
+            <View style={styles.buttonOrder}>
+                  
+                   <View style={styles.buttonAlign}>
+                    <Pressable onPress={()=> {router.push("/contact")}}
+                   style={styles.button}>
+                   <Text style={styles.buttonText}>
+                  Contact Us
+                   </Text>
+                                                                   
+                   </Pressable>
+                                                                  
+                   </View>
 
          <View style={styles.buttonAlign}>
           <Pressable onPress={()=> {router.push("/home_page")}}
@@ -378,7 +389,7 @@ const styles = StyleSheet.create({
     justifyContent:"center",
     alignItems: "center",
      width:"100%",
-    height:20,
+    height:35
     
   },
   buttonText:{

@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "Adventure_EscapeSA",
+    "name": "Adventure Escape SA",
     "slug": "Adventure_EscapeSA",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/images/app_images/company logo.png",
+    "icon": "./assets/images/app_images/company logo.png",
     "scheme": "adventureescapesa",
     "userInterfaceStyle": "automatic",
     "ios": {
@@ -12,8 +12,8 @@
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#9fb6a2",
-        "foregroundImage": "./assets/images/images/app_images/company logo.png",
+        "backgroundColor": "#ffffff",
+        "foregroundImage": "./assets/images/app_images/company logo.png",
         "backgroundImage": "./assets/images/android-icon-background.png",
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },

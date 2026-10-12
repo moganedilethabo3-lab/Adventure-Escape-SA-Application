@@ -72,6 +72,17 @@ export default function Index() {
           for both individuals and those that come in groups.
         </Text>
 
+       <View style={styles.buttonOrder}>
+       <View style={styles.buttonAlign}>
+             <Pressable onPress={()=> {router.push("/activities")}}
+               style={styles.button}>
+               <Text style={styles.buttonText}>
+                 Activities
+               </Text>
+              
+             </Pressable>
+             
+             </View>
         <View style={styles.buttonAlign}>
         <Pressable onPress={()=> {router.push("/home_page")}}
           style={styles.button}>
@@ -81,6 +92,7 @@ export default function Index() {
                
         </Pressable>
 
+        </View>
         </View>
 
         
@@ -193,6 +205,14 @@ const styles = StyleSheet.create({
     paddingHorizontal: 85,
     paddingVertical: 8,
     backgroundColor: "#31241f",
+  },
+  buttonOrder:{
+ flexDirection:"column",
+ alignItems:"center",
+ gap: 30,
+ width:"100%",
+ paddingHorizontal:20,
+
   },
   buttonAlign:{
     justifyContent:"center",

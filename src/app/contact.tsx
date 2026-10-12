@@ -67,6 +67,7 @@ export default function Index() {
 
         </View>
       
+
       <View style={styles.buttonAlign}>
       <Pressable onPress={()=> {router.push("/home_page")}}
       style={styles.button}>
@@ -76,7 +77,8 @@ export default function Index() {
                                          
       </Pressable>
                                         
-      </View> 
+      
+      </View>
 
 
      </View>
@@ -189,5 +191,13 @@ const styles = StyleSheet.create({
   },
   buttonText:{
     color: "#ffffff",
+  },
+  buttonOrder:{
+ flexDirection:"column",
+ alignItems:"center",
+ gap: 30,
+ width:"100%",
+ paddingHorizontal:20,
+
   },
 });
