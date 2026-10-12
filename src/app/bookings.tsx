@@ -9,14 +9,14 @@ import {useState} from "react"
 
 export default function Index() {
   
- const [PackageName, setpackageName] = useState("");
+ const [packageName, setpackageName] = useState("");
   const [bookingNumber,setbookingNumber]= useState("");
   const [selectedCatergory, setSelectedCatergory] = useState("");
   const[escapeLocation,setescapeLocation]= useState("");
 
   const saveBooking = async() =>{
 
-    if (!PackageName || !bookingNumber || !selectedCatergory|| !escapeLocation){
+    if (!packageName || !bookingNumber || !selectedCatergory|| !escapeLocation){
     Alert.alert(
     "Missing Booking Information",
     "Please complete all field before saving your bookings."
@@ -29,7 +29,7 @@ export default function Index() {
     const newBooking ={
     id:Date.now().toString(),
     selectedCatergory:selectedCatergory,
-    PackageName: PackageName,
+    PackageName: packageName,
     escapeLocation:escapeLocation,
     bookingNumber:bookingNumber,
      
@@ -45,7 +45,7 @@ export default function Index() {
         JSON.stringify(booking)
       );
         
-      Alert.alert("Success", "Dish saved successfully onto menu!" );
+      Alert.alert("Success", "Booking saved successfully onto system!" );
        
       router.replace("/view");
 
@@ -75,7 +75,7 @@ export default function Index() {
          <View style={styles.formContainer}>
       
        <View>
-            <Text style={styles.label}>
+          <Text style={styles.label}>
            Booking Catergory
             </Text>
           <Picker style={styles.dropDown}
@@ -91,7 +91,7 @@ export default function Index() {
            Escape Package
             </Text>
           <Picker style={styles.dropDown}
-           selectedValue={PackageName}
+           selectedValue={packageName}
             onValueChange={(itemValue, itemIndex) =>
             setpackageName(itemValue)
             }>
@@ -133,17 +133,7 @@ export default function Index() {
 
       <View style={styles.buttonOrder}>
 
-         <View style={styles.buttonAlign}>
-       <Pressable onPress={()=> {router.push("/home_page")}}
-      style={styles.button}>
-       <Text style={styles.text}>
-       Home
-      </Text>
-                                   
-      </Pressable>
-                                  
-      </View>
-
+        
 
       <View style={styles.buttonAlign}>
 
@@ -157,6 +147,17 @@ export default function Index() {
       </Pressable>
       </View>
       
+       <View style={styles.buttonAlign}>
+       <Pressable onPress={()=> {router.push("/home_page")}}
+      style={styles.button}>
+       <Text style={styles.text}>
+       Home
+      </Text>
+                                   
+      </Pressable>
+                                  
+      </View>
+
 
       
       </View>
@@ -258,6 +259,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     padding: 12,
     fontSize: 20,
+    backgroundColor:"#d8e2dc",
   },
 
 });

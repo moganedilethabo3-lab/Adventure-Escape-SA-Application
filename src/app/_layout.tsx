@@ -60,6 +60,13 @@ export default function RootLayout() {
     />
 
     <Stack.Screen
+    name="view"
+    options={{
+      title: 'view'
+    } }
+    />
+
+    <Stack.Screen
     name="quotation"
     options={{
       title: 'quotation'
