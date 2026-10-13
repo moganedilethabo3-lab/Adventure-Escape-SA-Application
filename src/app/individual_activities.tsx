@@ -35,7 +35,7 @@ export default function Index() {
             <Text style={styles.packageText}> Ziplining Adventure </Text>
            
             <Text style={styles.packageText}> Fee: R750</Text>
-            <Text style={styles.packageText}> Package includes the following:</Text>
+            <Text style={styles.packageText}> Package includes:</Text>
             <Text style={styles.packageText}> Safety Briefying</Text>
             <Text style={styles.packageText}> Professional instrucors</Text>
             <Text style={styles.packageText}> Safety Equipment Hires</Text>
@@ -52,7 +52,7 @@ export default function Index() {
              <View style={styles.align}>
             <Text style={styles.packageText}> Kayaking Experience </Text>
             <Text style={styles.packageText}> Fee: R750</Text>
-            <Text style={styles.packageText}> Package includes the following:</Text>
+            <Text style={styles.packageText}> Package includes:</Text>
             <Text style={styles.packageText}> Kayak and Paddle purchases</Text>
             <Text style={styles.packageText}> Guided route to kayak</Text>
             <Text style={styles.packageText}> Safety Equipment Hires</Text>
@@ -69,7 +69,7 @@ export default function Index() {
              <View style={styles.align}>
             <Text style={styles.packageText}> Rock Climbing Session </Text>
               <Text style={styles.packageText}> Fee: R750</Text>
-            <Text style={styles.packageText}> Package includes the following:</Text>
+            <Text style={styles.packageText}> Package includes :</Text>
             <Text style={styles.packageText}> Climbing equipment</Text>
             <Text style={styles.packageText}> Safety Instructor</Text>
             <Text style={styles.packageText}> Professional rock climbing guides</Text>
@@ -91,7 +91,7 @@ export default function Index() {
              <View style={styles.align}>
             <Text style={styles.packageText}> Ziplining Adventure </Text>
             <Text style={styles.packageText}> Fee: R750</Text>
-            <Text style={styles.packageText}> Package includes the following:</Text>
+            <Text style={styles.packageText}> Package includes:</Text>
             <Text style={styles.packageText}> Safety Briefying</Text>
             <Text style={styles.packageText}> Professional instrucors</Text>
             <Text style={styles.packageText}> Safety Equipment Hires</Text>
@@ -108,7 +108,7 @@ export default function Index() {
              <View style={styles.align}>
             <Text style={styles.packageText}> Rock Climbing Session </Text>
              <Text style={styles.packageText}> Fee: R750</Text>
-            <Text style={styles.packageText}> Package includes the following:</Text>
+            <Text style={styles.packageText}> Package includes :</Text>
             <Text style={styles.packageText}> Climbing equipment</Text>
             <Text style={styles.packageText}> Safety Instructor</Text>
             <Text style={styles.packageText}> Professional rock climbing guides</Text>
@@ -129,7 +129,7 @@ export default function Index() {
              <View style={styles.align}>
             <Text style={styles.packageText}> Rock Climbing Session</Text>
              <Text style={styles.packageText}> Fee: R750</Text>
-            <Text style={styles.packageText}> Package includes the following:</Text>
+            <Text style={styles.packageText}> Package includes :</Text>
             <Text style={styles.packageText}> Climbing equipment</Text>
             <Text style={styles.packageText}> Safety Instructor</Text>
             <Text style={styles.packageText}> Professional rock climbing guides</Text>
@@ -150,7 +150,7 @@ export default function Index() {
              <View style={styles.align}>
             <Text style={styles.packageText}> Kayaking Experience </Text>
               <Text style={styles.packageText}> Fee: R750</Text>
-            <Text style={styles.packageText}> Package includes the following:</Text>
+            <Text style={styles.packageText}> Package includes :</Text>
             <Text style={styles.packageText}> Kayak and Paddle purchases</Text>
             <Text style={styles.packageText}> Guided route to kayak</Text>
             <Text style={styles.packageText}> Safety Equipment Hires</Text>
@@ -165,8 +165,7 @@ export default function Index() {
 
         
         
-        <View style={styles.buttonOrder}>
-            <View style={styles.buttonAlign}>
+        
             <Pressable onPress={()=> {router.push("/home_page")}}
             style={styles.button}>
             <Text style={styles.buttonText}>
@@ -175,9 +174,9 @@ export default function Index() {
                
             </Pressable>
               
-            </View>
+            
 
-            <View style={styles.buttonAlign}>
+            
             <Pressable onPress={()=> {router.push("/equipment_purchase")}}
             style={styles.button}>
             <Text style={styles.buttonText}>
@@ -186,9 +185,8 @@ export default function Index() {
                                
             </Pressable>
                               
-            </View>
-            
-            <View style={styles.buttonAlign}>
+        
+        
             <Pressable onPress={()=> {router.push("/bookings")}}
              style={styles.button}>
              <Text style={styles.buttonText}>
@@ -197,8 +195,7 @@ export default function Index() {
                                
             </Pressable>
                               
-            </View>
-          </View>
+           
 
 
     </ScrollView>
@@ -272,19 +269,25 @@ const styles = StyleSheet.create({
     lineHeight: 32,
     marginBottom: 25,
   },
-   packageRow:{
-    width:"100%",
+  packageRow: {
+    width: "100%",
     flexDirection: "row",
-    alignItems:"center",
-    justifyContent:"center",
-    gap: 12,
-    marginBottom: 5,
+    alignItems: "center",
+    padding: 10,
+    borderRadius: 12,
+    gap: 10,
+    marginBottom: 10,
   },
-  packageImage:{
-    width: 175,
-    height: 220,
-   flexShrink:0,
-   borderRadius: 12,
+  packageImage: {
+    width: 110,
+    height: 120,
+    borderRadius: 8,
+  },
+  align: {
+    flex: 1,
+    flexShrink: 1,
+    flexDirection: "column",
+    justifyContent: "center",
   },
     packageText:{
     flex:1,
@@ -295,37 +298,22 @@ const styles = StyleSheet.create({
     marginBottom: 0,
     color: "#58433B",
     justifyContent:"center",
+    fontWeight:"bold",
   },
-  button:{
-    marginTop:105,
-    borderRadius: 15,
-    paddingHorizontal: 85,
-    paddingVertical: 8,
+ button:{
+     width: "100%",
+     maxHeight:600,
     backgroundColor: "#31241f",
-  },
-  buttonAlign:{
-    justifyContent:"center",
+    padding: 14,
+    borderRadius: 12,
     alignItems: "center",
-     width:"100%",
-    height:20,
-    
+    marginTop: 8,
+    marginBottom: 8,
   },
   buttonText:{
     color: "#ffffff",
+    fontSize:17,
+    fontWeight:"bold",
   },
-  buttonOrder:{
- flexDirection:"column",
- alignItems:"center",
- gap: 30,
- width:"100%",
- paddingHorizontal:20,
-
-  },
-   align:{
-    flexDirection: "column",
-    textAlign:"center",
-    width: "90%",
-    lineHeight: 20,
-    
-  },
+   
 });

@@ -24,7 +24,6 @@ export default function Index() {
       <Text style={styles.subHeading}> Group Activity Packagaes</Text>
     </Pressable>
 
-    <View style={styles.buttonAlign}>
           <Pressable onPress={()=> {router.push("/home_page")}}
             style={styles.button}>
             <Text style={styles.buttonText}>
@@ -32,7 +31,7 @@ export default function Index() {
             </Text>
            
           </Pressable>
-    </View>
+    
 
 
    </View>
@@ -80,20 +79,18 @@ const styles = StyleSheet.create({
     color:"#354933"
   },
   button:{
-    marginTop:10,
-    borderRadius: 15,
-    paddingHorizontal: 85,
-    paddingVertical: 8,
+     width: "100%",
     backgroundColor: "#31241f",
-  },
-  buttonAlign:{
-    justifyContent:"center",
+    padding: 14,
+    borderRadius: 12,
     alignItems: "center",
-     width:"100%",
-    height:20,
+    marginTop: 8,
+    marginBottom: 8,
   },
   buttonText:{
     color: "#ffffff",
+    fontSize:17,
+    fontWeight:"bold",
   },
   subHeading:{
     fontSize: 25,

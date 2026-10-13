@@ -32,9 +32,9 @@ export default function Index() {
            resizeMode="contain"
                        />
              <View style={styles.align}>
-             <Text style={styles.packageText}> Ultimate Adventure Day</Text>
+             <Text style={styles.screenText}> Ultimate Adventure Day</Text>
               <Text style={styles.packageText}> Fee: R1500</Text>
-             <Text style={styles.packageText}> Package includes the following:</Text>
+             <Text style={styles.packageText}> Package includes :</Text>
               <Text style={styles.packageText}> Guided Hiking</Text>
               <Text style={styles.packageText}> Ziplining</Text>
               <Text style={styles.packageText}> Kayaking</Text>
@@ -50,9 +50,9 @@ export default function Index() {
                        />
            
                         <View style={styles.align}>
-                       <Text style={styles.packageText}>Mountain Adventure Package  </Text>
+                       <Text style={styles.screenText}>Mountain Adventure Package  </Text>
                          <Text style={styles.packageText}> Fee: R1500</Text>
-                         <Text style={styles.packageText}> Package includes the following:</Text>
+                         <Text style={styles.packageText}> Package includes :</Text>
                         <Text style={styles.packageText}> Mountain hiking</Text>
                         <Text style={styles.packageText}> Sun Set Watching </Text>
                          <Text style={styles.packageText}> Rock scrambling</Text>
@@ -70,9 +70,9 @@ export default function Index() {
                        />
            
                        <View style={styles.align}>
-                       <Text style={styles.packageText}>Family Explore Package  </Text>
+                       <Text style={styles.screenText}>Family Explore Package  </Text>
                          <Text style={styles.packageText}> Fee: R150o</Text>
-                         <Text style={styles.packageText}> Package includes the following:</Text>
+                         <Text style={styles.packageText}> Package includes :</Text>
                         <Text style={styles.packageText}> Nature Walk</Text>
                         <Text style={styles.packageText}> Obstacle Course</Text>
                          <Text style={styles.packageText}> Family games</Text>
@@ -93,9 +93,9 @@ export default function Index() {
                        />
 
                        <View style={styles.align}>
-                       <Text style={styles.packageText}>Ultimate Adventure Day  </Text>
+                       <Text style={styles.screenText}>Ultimate Adventure Day  </Text>
                        <Text style={styles.packageText}> Fee: R1500</Text>
-                         <Text style={styles.packageText}> Package includes the following:</Text>
+                         <Text style={styles.packageText}> Package includes :</Text>
                         <Text style={styles.packageText}> Guided Hiking</Text>
                         <Text style={styles.packageText}> Ziplining</Text>
                          <Text style={styles.packageText}> Kayaking</Text>
@@ -113,9 +113,9 @@ export default function Index() {
                        />
 
                        <View style={styles.align}>
-                       <Text style={styles.packageText}>Family Explore Package  </Text>
+                       <Text style={styles.screenText}>Family Explore Package  </Text>
                          <Text style={styles.packageText}> Fee: R150o</Text>
-                         <Text style={styles.packageText}> Package includes the following:</Text>
+                         <Text style={styles.packageText}> Package includes :</Text>
                         <Text style={styles.packageText}> Nature Walk</Text>
                         <Text style={styles.packageText}> Obstacle Course</Text>
                          <Text style={styles.packageText}> Family games</Text>
@@ -134,9 +134,9 @@ export default function Index() {
                        />
            
                        < View style={styles.align}>
-                       <Text style={styles.packageText}>Corporate Team Challeneg  </Text>
+                       <Text style={styles.screenText}>Corporate Team Challeneg  </Text>
                          <Text style={styles.packageText}> Fee: R1500</Text>
-                         <Text style={styles.packageText}> Package includes the following:</Text>
+                         <Text style={styles.packageText}> Package includes :</Text>
                         <Text style={styles.packageText}> Team obstacle course</Text>
                         <Text style={styles.packageText}> Orienteering challeneg </Text>
                          <Text style={styles.packageText}> Raft building</Text>
@@ -153,9 +153,9 @@ export default function Index() {
                        />
            
                        <View style={styles.align}>
-                       <Text style={styles.packageText}>Family Explore Package  </Text>
+                       <Text style={styles.screenText}>Family Explore Package  </Text>
                          <Text style={styles.packageText}> Fee: R150o</Text>
-                         <Text style={styles.packageText}> Package includes the following:</Text>
+                         <Text style={styles.packageText}> Package includes :</Text>
                         <Text style={styles.packageText}> Nature Walk</Text>
                         <Text style={styles.packageText}> Obstacle Course</Text>
                          <Text style={styles.packageText}> Family games</Text>
@@ -176,9 +176,9 @@ export default function Index() {
                        />
            
                        <View style={styles.align}>
-                       <Text style={styles.packageText}>Mountain Adventure Package  </Text>
+                       <Text style={styles.screenText}>Mountain Adventure Package  </Text>
                          <Text style={styles.packageText}> Fee: R1500</Text>
-                         <Text style={styles.packageText}> Package includes the following:</Text>
+                         <Text style={styles.packageText}> Package includes :</Text>
                         <Text style={styles.packageText}> Mountain hiking</Text>
                         <Text style={styles.packageText}> Sun Set Watching </Text>
                          <Text style={styles.packageText}> Rock scrambling</Text>
@@ -198,9 +198,9 @@ export default function Index() {
                        />
            
                        <View style={styles.align}>
-                       <Text style={styles.packageText}>Ultimate Adventure Day  </Text>
+                       <Text style={styles.screenText}>Ultimate Adventure Day  </Text>
                        <Text style={styles.packageText}> Fee: R1500</Text>
-                         <Text style={styles.packageText}> Package includes the following:</Text>
+                         <Text style={styles.packageText}> Package includes :</Text>
                         <Text style={styles.packageText}> Guided Hiking</Text>
                         <Text style={styles.packageText}> Ziplining</Text>
                          <Text style={styles.packageText}> Kayaking</Text>
@@ -221,9 +221,9 @@ export default function Index() {
                        />
            
                        < View style={styles.align}>
-                       <Text style={styles.packageText}>Corporate Team Challeneg  </Text>
+                       <Text style={styles.screenText}>Corporate Team Challeneg  </Text>
                          <Text style={styles.packageText}> Fee: R1500</Text>
-                         <Text style={styles.packageText}> Package includes the following:</Text>
+                         <Text style={styles.packageText}> Package includes :</Text>
                         <Text style={styles.packageText}> Team obstacle course</Text>
                         <Text style={styles.packageText}> Orienteering challeneg </Text>
                          <Text style={styles.packageText}> Raft building</Text>
@@ -233,11 +233,10 @@ export default function Index() {
                        
                      </View>
                        
-                     </View>
+                     
 
 
-              <View style={styles.buttonOrder}>
-                <View style={styles.buttonAlign}>
+              
                 <Pressable onPress={()=> {router.push("/home_page")}}
                 style={styles.button}>
                 <Text style={styles.buttonText}>
@@ -246,9 +245,8 @@ export default function Index() {
                    
                 </Pressable>
                   
-                </View>
+                
 
-                <View style={styles.buttonAlign}>
                 <Pressable onPress={()=> {router.push("/equipment_purchase")}}
                 style={styles.button}>
                 <Text style={styles.buttonText}>
@@ -257,9 +255,9 @@ export default function Index() {
                    
                 </Pressable>
                   
-                </View>
+            
 
-                <View style={styles.buttonAlign}>
+                
                 <Pressable onPress={()=> {router.push("/bookings")}}
                 style={styles.button}>
                 <Text style={styles.buttonText}>
@@ -268,9 +266,8 @@ export default function Index() {
                    
                 </Pressable>
                   
-                </View>
-              </View>
-    
+                
+            </View>
         </ScrollView>
       );
     }
@@ -336,26 +333,34 @@ export default function Index() {
       },
       screenText:{
        fontSize: 20,
-        fontWeight: "400",
+        fontWeight: "bold",
         textAlign: "center",
         marginBottom: 12,
        lineHeight: 25,
-       color:"#58433B"
+       color:"#58433B",
+       
       },
-       packageRow:{
-        width:"100%",
-        flexDirection: "row",
-        alignItems:"center",
-        justifyContent:"flex-start",
-        gap: 12,
-        marginBottom: 15,
-      },
-      packageImage:{
-        width: 175,
-        height: 220,
-       flexShrink:0,
-       borderRadius: 12,
-      },
+      packageRow: {
+    width: "100%",
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: "rgba(255, 255, 255, 0.5)",
+    padding: 10,
+    borderRadius: 12,
+    gap: 10,
+    marginBottom: 10,
+  },
+  packageImage: {
+    width: 110,
+    height: 120,
+    borderRadius: 8,
+  },
+  align: {
+    flex: 1,
+    flexShrink: 1,
+    flexDirection: "column",
+    justifyContent: "center",
+  },
         packageText:{
         flex:1,
         flexShrink: 1,
@@ -367,34 +372,19 @@ export default function Index() {
         justifyContent:"center",
       },
       button:{
-        marginTop:10,
-        borderRadius: 15,
-        paddingHorizontal: 85,
-        paddingVertical: 8,
-        backgroundColor: "#31241f",
-      },
-      buttonAlign:{
-        justifyContent:"center",
-        alignItems: "center",
-         width:"100%",
-        height:20,
-      },
-      buttonText:{
-        color: "#ffffff",
-      },
-      buttonOrder:{
-       flexDirection:"column",
-       alignItems:"center",
-       gap: 30,
-       width:"100%",
-        paddingHorizontal:20
-      },
-       align:{
-    flexDirection: "column",
-    textAlign:"center",
-    width: "90%",
-    lineHeight: 20,
-    
+     width: "100%",
+     maxHeight:600,
+    padding: 14,
+    borderRadius: 12,
+    alignItems: "center",
+    marginTop: 8,
+    marginBottom: 8,
   },
+  buttonText:{
+    color: "#ffffff",
+    fontSize:17,
+    fontWeight:"bold",
+  },
+  
 
     });

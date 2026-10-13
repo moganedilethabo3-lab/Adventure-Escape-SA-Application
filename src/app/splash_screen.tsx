@@ -76,33 +76,38 @@ const styles = StyleSheet.create({
     backgroundColor: "#9fb6a2",
     justifyContent: 'center',
     alignItems: 'center',
+    paddingHorizontal:16,
   },
 
   content: {
     alignItems: 'center',
+    width:"100%"
   },
 
   logo: {
-    width: 250,
-    height: 250,
-    marginBottom: 20,
+    width: 200,
+    height: 200,
+    marginBottom: 15,
   },
 
   appName: {
-    fontSize: 40,
+    fontSize: 30,
     fontWeight: 'bold',
     color: '#FFFFFF',
+    textAlign:"center"
   },
 
   subtitle: {
     fontSize: 15,
     color: '#ffffff',
     marginTop: 8,
+    textAlign:"center"
   },
 
   loading: {
     fontSize: 20,
     color: '#000000',
-    marginTop: 40,
+    marginTop: 25,
+    fontWeight:"600",
   },
 });

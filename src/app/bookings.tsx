@@ -135,11 +135,11 @@ export default function Index() {
         </View> 
         </View>
 
-      <View style={styles.buttonOrder}>
+      
 
         
 
-      <View style={styles.buttonAlign}>
+     
 
       <Pressable style={styles.button}
       onPress={saveBooking} >
@@ -149,9 +149,7 @@ export default function Index() {
            </Text>
         
       </Pressable>
-      </View>
-      
-       <View style={styles.buttonAlign}>
+     
        <Pressable onPress={()=> {router.push("/home_page")}}
       style={styles.button}>
        <Text style={styles.text}>
@@ -160,11 +158,7 @@ export default function Index() {
                                    
       </Pressable>
                                   
-      </View>
-
-
       
-      </View>
 
       </View>
     </ScrollView>
@@ -204,34 +198,25 @@ const styles = StyleSheet.create({
     marginBottom:15,
     color:"#354933"
   },
-  button:{
-    marginTop:105,
-    borderRadius: 15,
-    paddingHorizontal: 85,
-    paddingVertical: 8,
+   button:{
+     width: "100%",
+     maxHeight:600,
     backgroundColor: "#31241f",
-  },
-  buttonAlign:{
-    justifyContent:"center",
+    padding: 14,
+    borderRadius: 12,
     alignItems: "center",
-     width:"100%",
-    height:50,
-    
+    marginTop: 8,
+    marginBottom: 8,
   },
   buttonText:{
     color: "#ffffff",
-  },
-  buttonOrder:{
- flexDirection:"column",
- alignItems:"center",
- gap: 30,
- width:"100%",
- paddingHorizontal:20,
-
+    fontSize:17,
+    fontWeight:"bold",
   },
   text:{
     color:"white",
     fontWeight:"bold",
+    fontSize:15,
   },
 
   dropDown:{
@@ -240,7 +225,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     borderRadius: 8,
     marginBottom: 10,
-    height:55,
+    height:45,
   },
   formContainer:{
     position:"relative",
@@ -248,21 +233,23 @@ const styles = StyleSheet.create({
     borderWidth:1,
     borderColor:"black",
     borderRadius:8,
-    padding:16,
+    padding:10,
     margin: 16,
+    marginHorizontal:0,
+    marginVertical:5,
   },
   label:{
-   fontSize: 16,
+   fontSize: 14,
     fontWeight:"bold",
-    marginTop:12,
+    marginTop:10,
     marginBottom: 6,
   },
   input :{
    borderWidth: 1,
     borderColor:"black",
     borderRadius: 8,
-    padding: 12,
-    fontSize: 20,
+    padding: 10,
+    fontSize: 15,
     backgroundColor:"#d8e2dc",
   },
 

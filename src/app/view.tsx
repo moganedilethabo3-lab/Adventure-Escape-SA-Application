@@ -104,9 +104,7 @@ export default function Index() {
           ))
 
         )}
-         <View style={styles.buttonOrder}>
-
-          <View style={styles.buttonAlign}>
+         
                  <Pressable onPress={()=> {router.push("/quotation")}}
                 style={styles.button}>
                   <Text style={styles.buttonText}>
@@ -115,9 +113,9 @@ export default function Index() {
                                                  
                 </Pressable>
                                                 
-               </View>
+               
 
-         <View style={styles.buttonAlign}>
+         
                <Pressable onPress={()=> {router.push("/home_page")}}
               style={styles.button}>
                <Text style={styles.buttonText}>
@@ -126,11 +124,7 @@ export default function Index() {
                                            
               </Pressable>
                                           
-              </View>
-
               
-
-               </View>
 
     </  ScrollView>
 
@@ -160,22 +154,20 @@ const styles = StyleSheet.create({
     marginBottom:15,
     color:"#354933"
   },
-   button:{
-    marginTop:105,
-    borderRadius: 15,
-    paddingHorizontal: 85,
-    paddingVertical: 8,
+    button:{
+     width: "100%",
+     maxHeight:600,
     backgroundColor: "#31241f",
-  },
-  buttonAlign:{
-    justifyContent:"center",
+    padding: 14,
+    borderRadius: 12,
     alignItems: "center",
-     width:"100%",
-    height:50,
-    
+    marginTop: 8,
+    marginBottom: 8,
   },
   buttonText:{
     color: "#ffffff",
+    fontSize:17,
+    fontWeight:"bold",
   },
   noDishes:{
     textAlign:"center",
@@ -183,12 +175,12 @@ const styles = StyleSheet.create({
     marginTop: 30
   },
    label:{
-    fontSize:25,
+    fontSize:20,
     fontWeight:"bold",
     marginTop:8,
   },
   cardText:{
-    fontSize: 20,
+    fontSize: 16,
     marginTop: 5,
   },
   
@@ -200,8 +192,8 @@ const styles = StyleSheet.create({
     width:"90%",
     maxWidth: 650,
     minHeight:280,
-    padding: 24,
-    marginBottom: 25,
+    padding: 20,
+    marginBottom: 20,
     alignSelf:"center",
   },
   bookingText:{
@@ -209,16 +201,9 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     marginBottom: 8,
   },
-  buttonOrder:{
- flexDirection:"column",
- alignItems:"center",
- gap: 30,
- width:"100%",
- paddingHorizontal:20,
-
-  },
+ 
   dishName:{
-    fontSize: 30,
+    fontSize: 25,
     fontWeight: "bold",
     marginBottom: 8,
   },

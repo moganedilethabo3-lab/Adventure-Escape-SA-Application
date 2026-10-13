@@ -23,126 +23,118 @@ export default function Index() {
             
                   <View style={styles.locationRow}>
                 
-                  <View>
+                  
                   <Image
                    source={require('@/assets/images/app_images/gallery.jpg')}
                    style={styles.locationImage}
                     resizeMode="contain"
                     />
                   
-                   </View>
+                  
                 
-                  <View>
+                  
                   <Image
                    source={require('@/assets/images/app_images/gallery(1).jpg')}
                     style={styles.locationImage}
                    resizeMode="contain"
                    />
-              
+                  
+                   
                   </View>
-                
-                  <View>
-                   <Image
+
+                  <View style={styles.locationRow}>
+                    <Image
                    source={require('@/assets/images/app_images/gallery(13).jpg')}
                   style={styles.locationImage}
                    resizeMode="contain"
                     />
-                  
-                   </View>
-                  </View>
 
-          <View style={styles.locationRow}>
-                
-                  <View>
-                  <Image
+                    <Image
                    source={require('@/assets/images/app_images/gallery(3).jpg')}
                    style={styles.locationImage}
                     resizeMode="contain"
                     />
-                  
-                   </View>
+
+
+                  </View>
+
+          <View style={styles.locationRow}>
+
                 
-                  <View>
+                  
                   <Image
                    source={require('@/assets/images/app_images/gallery(4).jpg')}
                     style={styles.locationImage}
                    resizeMode="contain"
                    />
               
-                  </View>
                 
-                  <View>
+                
+                  
                    <Image
                    source={require('@/assets/images/app_images/gallery(5).jpg')}
                   style={styles.locationImage}
                    resizeMode="contain"
                     />
                   
-                   </View>
+                   
                   </View>
 
         <View style={styles.locationRow}>
                 
-                  <View>
+                  
                   <Image
                    source={require('@/assets/images/app_images/gallery(6).jpg')}
                    style={styles.locationImage}
                     resizeMode="contain"
                     />
                   
-                   </View>
+                   
                 
-                  <View>
+                  
                   <Image
                    source={require('@/assets/images/app_images/gallery(7).jpg')}
                     style={styles.locationImage}
                    resizeMode="contain"
                    />
+
               
                   </View>
-                
-                  <View>
+
+                   <View style={styles.locationRow}>
                    <Image
                    source={require('@/assets/images/app_images/gallery(8).jpg')}
                   style={styles.locationImage}
-                   resizeMode="contain"
-                    />
-                  
-                   </View>
-                  </View>
-              
-          <View style={styles.locationRow}>
-                
-                  <View>
-                  <Image
+                   resizeMode="contain"/>
+
+                    <Image
                    source={require('@/assets/images/app_images/gallery(9).jpg')}
                    style={styles.locationImage}
                     resizeMode="contain"
                     />
+
                   
                    </View>
-                
-                  <View>
+              
+          <View style={styles.locationRow}>
+ 
+                 
                   <Image
                    source={require('@/assets/images/app_images/gallery(10).jpg')}
                     style={styles.locationImage}
                    resizeMode="contain"
                    />
-              
-                  </View>
-                
-                  <View>
+
                    <Image
                    source={require('@/assets/images/app_images/gallery(11).jpg')}
                   style={styles.locationImage}
                    resizeMode="contain"
                     />
-                  
-                   </View>
+        
                   </View>
               
-    <View style={styles.buttonOrder}> 
-             <View style={styles.buttonAlign}>
+ 
+             
               <Pressable onPress={()=> {router.push("/bookings")}}
               style={styles.button}>
               <Text style={styles.buttonText}>
@@ -151,9 +143,9 @@ export default function Index() {
                                                      
               </Pressable>
                                                     
-              </View> 
+              
 
-              <View style={styles.buttonAlign}>
+              
               <Pressable onPress={()=> {router.push("/home_page")}}
               style={styles.button}>
               <Text style={styles.buttonText}>
@@ -162,8 +154,8 @@ export default function Index() {
                                                      
               </Pressable>
                                                     
-              </View> 
-              </View>
+              
+            
           </View>
         </ScrollView>
       );
@@ -208,51 +200,31 @@ export default function Index() {
         marginBottom:15,
         color:"#354933"
       },
-      buttonOrder:{
-      flexDirection:"column",
-       alignItems:"center",
-        gap: 30,
-        width:"100%",
-        paddingHorizontal:20,
-
-       },
        button:{
-        marginTop:105,
-        borderRadius: 15,
-        paddingHorizontal: 85,
-        paddingVertical: 8,
-        backgroundColor: "#31241f",
-      },
-      buttonAlign:{
-        justifyContent:"center",
-        alignItems: "center",
-         width:"100%",
-       height:35,
-        
-      },
-      buttonText:{
-        color: "#ffffff",
-      },
-       locationRow:{
+     width: "100%",
+    backgroundColor: "#31241f",
+    padding: 14,
+    borderRadius: 12,
+    alignItems: "center",
+    marginTop: 8,
+    marginBottom: 8,
+  },
+  buttonText:{
+    color: "#ffffff",
+    fontSize:17,
+    fontWeight:"bold",
+  },
+   locationRow:{
     width:"100%",
     flexDirection: "row",
     alignItems: 'flex-start',
-    gap: 5,
-    marginBottom: 24,
+    marginBottom: 20,
   },
   locationImage:{
     flex: 1,
     height: 250,
     borderRadius: 10,
     width: 250
-  },
-  locationText:{
-    flex:1,
-    flexShrink:1,
-    fontSize: 27,
-    fontWeight: "bold",
-    textAlign: "center",
-    color: "#354933",
-    lineHeight: 32,
-  },
+  }
+
     });

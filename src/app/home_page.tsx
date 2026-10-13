@@ -1,9 +1,18 @@
 
-import { Text, View, StyleSheet, Image, Pressable} from "react-native";
+import { Text, View, StyleSheet, Image, Pressable,useWindowDimensions,ScrollView} from "react-native";
 import { router } from "expo-router";
+import React from "react";
+import {moderateScale, verticalScale,} from "react-native-size-matters"
 export default function Index() {
+  
+  const{height} =useWindowDimensions();
+
+  const imageHeight = Math.min(
+    220,
+    Math.max(120, height * 0.22)
+  );
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
         <Image
             source={require('@/assets/images/app_images/company logo.png')}
             style={styles.logo}
@@ -64,26 +73,33 @@ export default function Index() {
          
     
 
-    </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+   container: {
     flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "#d8e2dc",
+   backgroundColor:"#d8e2dc",
+  },
+   contentContainer:{
+    alignItems:"center",
+   flexGrow: 1,
+    paddingHorizontal: moderateScale(16),
+    paddingTop: verticalScale(12),
+    paddingBottom: verticalScale(24),
+  
   },
    logo: {
     width: "100%",
     height: 150,
   },
+
   heading:{
-    fontSize:50,
+    fontSize:moderateScale(17),
     fontWeight: "bold",
     textAlign: "center",
-    marginBottom:15,
+    marginBottom:verticalScale(15),
     color:"#354933"
   },
   imageRow:{
@@ -93,10 +109,10 @@ const styles = StyleSheet.create({
     flexDirection: "row"
   },
   screenText:{
-    fontSize: 25,
+    fontSize: moderateScale(25),
     fontWeight: "bold",
     textAlign: "center",
-    marginBottom: 35,
+    marginBottom: verticalScale(15),
     color:"#58433B"
   },
   footer:{

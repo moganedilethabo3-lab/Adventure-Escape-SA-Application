@@ -1,9 +1,10 @@
-import { Text, View, StyleSheet, Image, Pressable} from "react-native";
+import { Text, View, StyleSheet, Image, Pressable, ScrollView} from "react-native";
 import { router } from "expo-router";
 import { Linking } from "react-native";
 export default function Index() {
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}
+        contentContainerStyle={styles.contentContainer}>
    <Image
    source={require('@/assets/images/app_images/company logo.png')}
     style={styles.logo}
@@ -68,7 +69,6 @@ export default function Index() {
         </View>
       
 
-      <View style={styles.buttonAlign}>
       <Pressable onPress={()=> {router.push("/home_page")}}
       style={styles.button}>
        <Text style={styles.buttonText}>
@@ -78,21 +78,27 @@ export default function Index() {
       </Pressable>
                                         
       
-      </View>
+      
 
 
-     </View>
+     </ScrollView>
     
   );
 }
 
 const styles = StyleSheet.create({
-    container: {
+   container: {
     flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "#d8e2dc",
+   backgroundColor:"#9fb6a2",
   },
+   contentContainer:{
+    padding:16,
+    alignItems:"center",
+    paddingTop: 20,
+    paddingBottom: 30,
+    flexGrow: 1,
+  },
+  
   introHeading:{
     flex:1,
     flexShrink:1,
@@ -136,24 +142,23 @@ const styles = StyleSheet.create({
     marginBottom:15,
     color:"#354933"
   },
-  locationRow:{
+   locationRow:{
     width:"100%",
     flexDirection: "row",
-    alignItems: 'center',
+    alignItems: 'flex-start',
     gap: 5,
-    marginBottom: 24,
-    marginTop:10,
+    marginBottom: 20,
   },
   locationImage:{
     flex: 1,
     height: 250,
-    borderRadius: 15,
+    borderRadius: 10,
     width: 250
   },
   locationText:{
     flex:1,
     flexShrink:1,
-    fontSize: 27,
+    fontSize: 25,
     fontWeight: "bold",
     textAlign: "center",
     color: "#354933",
@@ -165,39 +170,32 @@ const styles = StyleSheet.create({
     alignItems:"center",
     width:"100%",
     gap:20,
+    paddingVertical:4,
   },
   text1:{
-    fontSize:20,
-    color:"#58433B",
-    
+    flex: 1,
+    fontSize: 17,
+    color: "#58433B",
+    fontWeight: "600",
   },
   text2:{
-    fontSize:20,
-    color:"#58433B"
+   flex: 1.2,
+    fontSize: 15,
+    color: "#58433B",
+    fontWeight: "600",
   },
-    button:{
-    marginTop:105,
-    borderRadius: 15,
-    paddingHorizontal: 85,
-    paddingVertical: 8,
+   button:{
+     width: "100%",
     backgroundColor: "#31241f",
-  },
-  buttonAlign:{
-    justifyContent:"center",
+    padding: 14,
+    borderRadius: 12,
     alignItems: "center",
-     width:"100%",
-    height:20,
-    
+    marginTop: 15,
+    marginBottom: 8,
   },
   buttonText:{
     color: "#ffffff",
-  },
-  buttonOrder:{
- flexDirection:"column",
- alignItems:"center",
- gap: 30,
- width:"100%",
- paddingHorizontal:20,
-
+    fontSize:17,
+    fontWeight:"bold",
   },
 });

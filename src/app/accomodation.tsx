@@ -78,8 +78,6 @@ export default function Index() {
             </View>
             </View>
 
-              <View style={styles.buttonOrder}> 
-                 <View style={styles.buttonAlign}>
                   <Pressable onPress={()=> {router.push("/bookings")}}
                   style={styles.button}>
                   <Text style={styles.buttonText}>
@@ -87,9 +85,7 @@ export default function Index() {
                   </Text>
                                                          
                   </Pressable>
-                                                        
-                  </View> 
-            <View style={styles.buttonAlign}>
+           
               <Pressable onPress={()=> {router.push("/home_page")}}
                style={styles.button}>
                <Text style={styles.buttonText}>
@@ -98,8 +94,7 @@ export default function Index() {
                            
               </Pressable>
                           
-              </View>
-              </View>
+              
         
         </View>
 
@@ -154,36 +149,26 @@ const styles = StyleSheet.create({
     color: "#31241f",
     lineHeight: 32,
   },
-   buttonOrder:{
- flexDirection:"column",
- alignItems:"center",
- gap: 30,
- width:"100%",
- paddingHorizontal:20,
-
-  },
-  button:{
-    marginTop:105,
-    borderRadius: 15,
-    paddingHorizontal: 85,
-    paddingVertical: 8,
+    button:{
+     width: "100%",
+     maxHeight:600,
     backgroundColor: "#31241f",
-  },
-  buttonAlign:{
-    justifyContent:"center",
+    padding: 14,
+    borderRadius: 12,
     alignItems: "center",
-     width:"100%",
-    height:20,
-    
+    marginTop: 8,
+    marginBottom: 8,
   },
   buttonText:{
     color: "#ffffff",
+    fontSize:17,
+    fontWeight:"bold",
   },
   accomodationRow:{
     width:"100%",
     flexDirection: "row",
     alignItems:"center",
-    justifyContent:"center",
+    justifyContent:"flex-start",
     gap: 10,
     marginBottom: 5,
   },

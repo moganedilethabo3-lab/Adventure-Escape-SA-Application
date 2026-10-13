@@ -1,10 +1,13 @@
 import { Text, View, StyleSheet, ScrollView, Image,Pressable} from "react-native";
 import { router } from "expo-router";
+
+
 export default function Index() {
   return (
     <ScrollView style={styles.container}
      contentContainerStyle={styles.contentContainer}>
-     <View style={styles.pageAlign}>
+     
+    
       <Image
           source={require('@/assets/images/app_images/company logo.png')}
           style={styles.logo}
@@ -15,15 +18,22 @@ export default function Index() {
          Escape To South Africa
         </Text>
         
-        <View style={styles.introRow}>   
+        <View style={styles.pageAlign}>
+
           <Text style={styles.subHeading}>
             Why you should Escape with Us!</Text>    
         <Image
           source={require('@/assets/images/app_images/escape.jpg')}
-          style={styles.introImage}
+          style={styles.image}
           resizeMode="contain"
           />
-        </View>
+
+          <Text style={styles.screenText}>Want Family Time outdoors? Want to explore nature's beauty?  Well...Adventure Escape SA is the right choice for you! </Text>
+         <Text style={styles.screenText}> We offer one of South Africa's most affordable and exciting outdoor activities accustomised for every type of explorer! </Text>
+          <Text style={styles.bookLink} 
+          onPress={()=>{router.push("/bookings")}}> Book Today!</Text>
+        
+          
 
         <Text style={styles.introHeading}>
           Popular Escape SA Locations
@@ -48,16 +58,16 @@ export default function Index() {
         />
         <Text style={styles.locationText}> Johannesburg </Text>
         </View>
+        </View>
 
-        <View>
+     
           <Image
           source={require('@/assets/images/app_images/durban.jpg')}
           style={styles.locationImage}
           resizeMode="contain"
         />
         <Text style={styles.locationText}>Durban  </Text>
-        </View>
-        </View>
+      
 
         <Text style={styles.introHeading}>
           Adventure Escape SA services
@@ -72,8 +82,7 @@ export default function Index() {
           for both individuals and those that come in groups.
         </Text>
 
-       <View style={styles.buttonOrder}>
-       <View style={styles.buttonAlign}>
+       
              <Pressable onPress={()=> {router.push("/activities")}}
                style={styles.button}>
                <Text style={styles.buttonText}>
@@ -82,8 +91,8 @@ export default function Index() {
               
              </Pressable>
              
-             </View>
-        <View style={styles.buttonAlign}>
+             
+        
         <Pressable onPress={()=> {router.push("/home_page")}}
           style={styles.button}>
          <Text style={styles.buttonText}>
@@ -92,8 +101,7 @@ export default function Index() {
                
         </Pressable>
 
-        </View>
-        </View>
+       
 
         
         </View>
@@ -137,6 +145,14 @@ const styles = StyleSheet.create({
     lineHeight: 25,
     color:"#58433B"
   },
+  bookLink:{
+    fontSize: 23,
+    fontWeight: "bold",
+    textAlign: "center",
+    marginBottom: 12,
+    lineHeight: 25,
+    color:"green"
+  },
  
   subHeading:{
     fontSize: 35,
@@ -175,19 +191,30 @@ const styles = StyleSheet.create({
     height:175,
     borderRadius: 20,
     flexShrink:0,
+    alignItems:"center"
+  },
+  textContainer:{
+    flex:1,
+    flexShrink:1,
+  },
+   image:{
+   width:"100%",
+   height:200,
+   marginBottom:15,
   },
   locationRow:{
     width:"100%",
     flexDirection: "row",
-    alignItems: 'flex-start',
+    alignItems: 'center',
     gap: 5,
-    marginBottom: 24,
+    marginBottom: 20,
   },
   locationImage:{
     flex: 1,
     height: 250,
     borderRadius: 10,
-    width: 250
+    width: 250,
+    resizeMode:"contain"
   },
   locationText:{
     flex:1,
@@ -199,29 +226,19 @@ const styles = StyleSheet.create({
     lineHeight: 32,
   },
   
-  button:{
-    marginTop:45,
-    borderRadius: 15,
-    paddingHorizontal: 85,
-    paddingVertical: 8,
+   button:{
+     width: "100%",
     backgroundColor: "#31241f",
-  },
-  buttonOrder:{
- flexDirection:"column",
- alignItems:"center",
- gap: 30,
- width:"100%",
- paddingHorizontal:20,
-
-  },
-  buttonAlign:{
-    justifyContent:"center",
+    padding: 14,
+    borderRadius: 12,
     alignItems: "center",
-     width:"100%",
-    height:20,
+    marginTop: 8,
+    marginBottom: 8,
   },
   buttonText:{
     color: "#ffffff",
+    fontSize:17,
+    fontWeight:"bold",
   },
 
   
