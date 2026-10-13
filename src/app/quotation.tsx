@@ -92,14 +92,14 @@ const [quotation, setQuotation] = useState<null | {
 
              
 
-              <View style={styles.introRow}>
+              
               <Text style={styles.introHeading}> Average Package Fee Calculation</Text>
               <Image
                source={require('@/assets/images/app_images/money.jpg')}
-               style={styles.introImage}
+               style={styles.image}
                resizeMode="contain"
                />
-               </View>
+               
 
          <Text style={styles.subHeading}>Package Fee Calculator </Text>
         
@@ -172,9 +172,9 @@ const [quotation, setQuotation] = useState<null | {
                 <Picker.Item label="R1500" value="1500" />
                </Picker>
 
-               <View style={styles.buttonAlign}>
+              
             
-             <Pressable style={styles.button}
+             <Pressable style={styles.buttonQuote}
              onPress={calculateQuotation} >
                     
               <Text style={styles.text} >
@@ -182,7 +182,7 @@ const [quotation, setQuotation] = useState<null | {
                </Text>
                     
               </Pressable>
-               </View>
+               
               
             </View>
             </View>
@@ -250,9 +250,7 @@ const [quotation, setQuotation] = useState<null | {
 
 
             
-            <View style={styles.buttonOrder}>
-                  
-                   <View style={styles.buttonAlign}>
+            
                     <Pressable onPress={()=> {router.push("/contact")}}
                    style={styles.button}>
                    <Text style={styles.buttonText}>
@@ -261,9 +259,9 @@ const [quotation, setQuotation] = useState<null | {
                                                                    
                    </Pressable>
                                                                   
-                   </View>
+                  
 
-         <View style={styles.buttonAlign}>
+         
           <Pressable onPress={()=> {router.push("/home_page")}}
           style={styles.button}>
           <Text style={styles.buttonText}>
@@ -272,8 +270,8 @@ const [quotation, setQuotation] = useState<null | {
                                                  
           </Pressable>
                                                 
-          </View> 
-          </View>
+          
+          
 
       </View>
     </ScrollView>
@@ -320,24 +318,14 @@ const styles = StyleSheet.create({
     lineHeight: 32,
   },
  
-  introRow:{
-    width: "100%",
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent:"center",
-    gap: 12,
-    marginBottom: 20,
-  },
-   introImage:{
-    width:"100%",
-    maxWidth:295,
-    height:175,
-    borderRadius: 12,
-    flexShrink:0,
+ image:{
+   width:"100%",
+   height:200,
+   marginBottom:15,
   },
   pageAlign:{
     width: "100%",
-    maxWidth: 750,
+    maxWidth: 650,
     alignSelf:"center",
     alignItems: "stretch",
     gap:10,
@@ -385,23 +373,19 @@ const styles = StyleSheet.create({
     backgroundColor:"#d8e2dc",
   },
    
-  buttonAlign:{
-    justifyContent:"center",
+ button:{
+     width: "100%",
+    backgroundColor: "#31241f",
+    padding: 14,
+    borderRadius: 12,
     alignItems: "center",
-     width:"100%",
-    height:35
-    
+    marginTop: 8,
+    marginBottom: 8,
   },
   buttonText:{
     color: "#ffffff",
-  },
-   buttonOrder:{
- flexDirection:"column",
- alignItems:"center",
- gap: 30,
- width:"100%",
- paddingHorizontal:20,
-
+    fontSize:17,
+    fontWeight:"bold",
   },
   text:{
     color:"white",
@@ -449,7 +433,7 @@ totalText: {
   marginTop: 12,
 },
 
-button: {
+buttonQuote: {
   alignSelf: "center",
   marginTop: 16,
   borderRadius: 15,

@@ -15,7 +15,7 @@ export default function Index() {
         Escape To South Africa
         </Text>
 
-   <View style={styles.pageAlign}>
+   
     <Pressable onPress={()=>{router.push("/bookings")}}>
       <Text style={styles.subHeading}> Book Today</Text>
     </Pressable>
@@ -39,7 +39,7 @@ export default function Index() {
    
 
 
-   </View>
+   
    
 
    
@@ -83,8 +83,9 @@ const styles = StyleSheet.create({
     marginBottom:15,
     color:"#354933"
   },
-  button:{
+   button:{
      width: "100%",
+     maxHeight:600,
     backgroundColor: "#31241f",
     padding: 14,
     borderRadius: 12,

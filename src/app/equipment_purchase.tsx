@@ -223,11 +223,13 @@ const styles = StyleSheet.create({
     fontWeight:"bold",
   },
   equipmentRow:{
-    width:"100%",
+    width: "100%",
     flexDirection: "column",
-    alignItems:"center",
-    justifyContent:"center",
-    gap: 12,
+    alignItems: "center",
+    backgroundColor: "rgba(255, 255, 255, 0.5)",
+    padding: 10,
+    borderRadius: 12,
+    gap: 10,
     marginBottom: 10,
   },
   equipmentImage:{

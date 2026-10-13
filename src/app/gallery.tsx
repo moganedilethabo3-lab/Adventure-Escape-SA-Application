@@ -219,6 +219,7 @@ export default function Index() {
     flexDirection: "row",
     alignItems: 'flex-start',
     marginBottom: 20,
+    gap:3,
   },
   locationImage:{
     flex: 1,

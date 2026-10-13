@@ -225,7 +225,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     borderRadius: 8,
     marginBottom: 10,
-    height:45,
+    height:50,
   },
   formContainer:{
     position:"relative",
@@ -249,7 +249,7 @@ const styles = StyleSheet.create({
     borderColor:"black",
     borderRadius: 8,
     padding: 10,
-    fontSize: 15,
+    fontSize: 17,
     backgroundColor:"#d8e2dc",
   },
 

@@ -32,7 +32,7 @@ export default function Index() {
             />
 
             <View style={styles.align}>
-            <Text style={styles.packageText}> Ziplining Adventure </Text>
+            <Text style={styles.screenText}> Ziplining Adventure </Text>
            
             <Text style={styles.packageText}> Fee: R750</Text>
             <Text style={styles.packageText}> Package includes:</Text>
@@ -50,7 +50,7 @@ export default function Index() {
             />
 
              <View style={styles.align}>
-            <Text style={styles.packageText}> Kayaking Experience </Text>
+            <Text style={styles.screenText}> Kayaking Experience </Text>
             <Text style={styles.packageText}> Fee: R750</Text>
             <Text style={styles.packageText}> Package includes:</Text>
             <Text style={styles.packageText}> Kayak and Paddle purchases</Text>
@@ -67,7 +67,7 @@ export default function Index() {
             />
 
              <View style={styles.align}>
-            <Text style={styles.packageText}> Rock Climbing Session </Text>
+            <Text style={styles.screenText}> Rock Climbing Session </Text>
               <Text style={styles.packageText}> Fee: R750</Text>
             <Text style={styles.packageText}> Package includes :</Text>
             <Text style={styles.packageText}> Climbing equipment</Text>
@@ -89,7 +89,7 @@ export default function Index() {
             />
 
              <View style={styles.align}>
-            <Text style={styles.packageText}> Ziplining Adventure </Text>
+            <Text style={styles.screenText}> Ziplining Adventure </Text>
             <Text style={styles.packageText}> Fee: R750</Text>
             <Text style={styles.packageText}> Package includes:</Text>
             <Text style={styles.packageText}> Safety Briefying</Text>
@@ -106,7 +106,7 @@ export default function Index() {
             />
 
              <View style={styles.align}>
-            <Text style={styles.packageText}> Rock Climbing Session </Text>
+            <Text style={styles.screenText}> Rock Climbing Session </Text>
              <Text style={styles.packageText}> Fee: R750</Text>
             <Text style={styles.packageText}> Package includes :</Text>
             <Text style={styles.packageText}> Climbing equipment</Text>
@@ -127,7 +127,7 @@ export default function Index() {
             />
 
              <View style={styles.align}>
-            <Text style={styles.packageText}> Rock Climbing Session</Text>
+            <Text style={styles.screenText}> Rock Climbing Session</Text>
              <Text style={styles.packageText}> Fee: R750</Text>
             <Text style={styles.packageText}> Package includes :</Text>
             <Text style={styles.packageText}> Climbing equipment</Text>
@@ -148,7 +148,7 @@ export default function Index() {
             />
 
              <View style={styles.align}>
-            <Text style={styles.packageText}> Kayaking Experience </Text>
+            <Text style={styles.screenText}> Kayaking Experience </Text>
               <Text style={styles.packageText}> Fee: R750</Text>
             <Text style={styles.packageText}> Package includes :</Text>
             <Text style={styles.packageText}> Kayak and Paddle purchases</Text>
@@ -158,7 +158,7 @@ export default function Index() {
             
           </View>
             
-          </View>
+          
 
             
           
@@ -194,10 +194,7 @@ export default function Index() {
             </Text>
                                
             </Pressable>
-                              
-           
-
-
+              </View>
     </ScrollView>
   );
 }
@@ -242,7 +239,7 @@ const styles = StyleSheet.create({
       },
       screenText:{
        fontSize: 20,
-        fontWeight: "400",
+        fontWeight: "bold",
         textAlign: "center",
         marginBottom: 12,
        lineHeight: 25,
@@ -277,6 +274,7 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     gap: 10,
     marginBottom: 10,
+    backgroundColor: "rgba(255, 255, 255, 0.5)",
   },
   packageImage: {
     width: 110,
@@ -315,5 +313,13 @@ const styles = StyleSheet.create({
     fontSize:17,
     fontWeight:"bold",
   },
-   
+  
+  
+   pagealign:{
+    flexDirection: "column",
+    textAlign:"center",
+    width: "90%",
+    lineHeight: 20,
+    
+  },
 });

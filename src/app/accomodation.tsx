@@ -165,12 +165,14 @@ const styles = StyleSheet.create({
     fontWeight:"bold",
   },
   accomodationRow:{
-    width:"100%",
+    width: "100%",
     flexDirection: "row",
-    alignItems:"center",
-    justifyContent:"flex-start",
+    alignItems: "center",
+    backgroundColor: "rgba(255, 255, 255, 0.5)",
+    padding: 10,
+    borderRadius: 12,
     gap: 10,
-    marginBottom: 5,
+    marginBottom: 10,
   },
   accomodationImage:{
     width: "50%",

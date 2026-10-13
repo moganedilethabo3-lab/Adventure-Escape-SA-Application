@@ -21,23 +21,23 @@ export default function Index() {
 
        <View style={styles.locationRow}>
        
-        <View>
+        
          <Image
          source={require('@/assets/images/app_images/cape town-building.jpg')}
          style={styles.locationImage}
          resizeMode="contain"
           />
          <Text style={styles.locationText} onPress={()=>Linking.openURL("https://maps.app.goo.gl/hqtyrGEU2vNQc5RZA")}> Cape Town</Text>
-         </View>
+         
        
-         <View>
+         
         <Image
          source={require('@/assets/images/app_images/pretoria-building.jpg')}
          style={styles.locationImage}
         resizeMode="contain"
         />
          <Text style={styles.locationText} onPress={()=>Linking.openURL("https://maps.app.goo.gl/SGoavGf3P41Vz9MR8")}> Pretoria </Text>
-         </View>
+         
          </View>
 
        
@@ -99,6 +99,7 @@ const styles = StyleSheet.create({
     flexGrow: 1,
   },
   
+  
   introHeading:{
     flex:1,
     flexShrink:1,
@@ -144,8 +145,8 @@ const styles = StyleSheet.create({
   },
    locationRow:{
     width:"100%",
-    flexDirection: "row",
-    alignItems: 'flex-start',
+    flexDirection: "column",
+    alignItems: "center",
     gap: 5,
     marginBottom: 20,
   },

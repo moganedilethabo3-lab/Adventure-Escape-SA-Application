@@ -16,7 +16,7 @@ export default function Index() {
             </Text>
     
             <Text style={styles.introHeading}>
-              Individual Escape SA Packages
+              Group Escape SA Packages
             </Text>
 
                    
@@ -377,6 +377,7 @@ export default function Index() {
     padding: 14,
     borderRadius: 12,
     alignItems: "center",
+    backgroundColor: "#31241f",
     marginTop: 8,
     marginBottom: 8,
   },

@@ -41,14 +41,7 @@ export default function Index() {
 
         <View style={styles.locationRow}>
 
-        <View>
-        <Image
-          source={require('@/assets/images/app_images/cape town.jpg')}
-          style={styles.locationImage}
-          resizeMode="contain"
-        />
-        <Text style={styles.locationText}> Cape Town</Text>
-        </View>
+        
 
         <View>
         <Image
@@ -58,7 +51,7 @@ export default function Index() {
         />
         <Text style={styles.locationText}> Johannesburg </Text>
         </View>
-        </View>
+        
 
      
           <Image
@@ -67,6 +60,16 @@ export default function Index() {
           resizeMode="contain"
         />
         <Text style={styles.locationText}>Durban  </Text>
+
+        <View>
+        <Image
+          source={require('@/assets/images/app_images/cape town.jpg')}
+          style={styles.locationImage}
+          resizeMode="contain"
+        />
+        <Text style={styles.locationText}> Cape Town</Text>
+        </View>
+        </View>
       
 
         <Text style={styles.introHeading}>
@@ -178,21 +181,6 @@ const styles = StyleSheet.create({
     lineHeight: 32,
   },
  
-  introRow:{
-    width: "100%",
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent:"center",
-    gap: 5,
-    marginBottom: 10,
-  },
-   introImage:{
-    width:185,
-    height:175,
-    borderRadius: 20,
-    flexShrink:0,
-    alignItems:"center"
-  },
   textContainer:{
     flex:1,
     flexShrink:1,
@@ -204,7 +192,7 @@ const styles = StyleSheet.create({
   },
   locationRow:{
     width:"100%",
-    flexDirection: "row",
+    flexDirection: "column",
     alignItems: 'center',
     gap: 5,
     marginBottom: 20,
