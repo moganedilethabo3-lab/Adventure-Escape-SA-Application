@@ -41,8 +41,6 @@ export default function Index() {
 
         <View style={styles.locationRow}>
 
-        
-
         <View>
         <Image
           source={require('@/assets/images/app_images/pretoria.jpg')}
