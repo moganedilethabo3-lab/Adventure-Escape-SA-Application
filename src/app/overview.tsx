@@ -41,15 +41,14 @@ export default function Index() {
 
         <View style={styles.locationRow}>
 
-        <View>
+         <View>
         <Image
-          source={require('@/assets/images/app_images/pretoria.jpg')}
+          source={require('@/assets/images/app_images/cape town.jpg')}
           style={styles.locationImage}
           resizeMode="contain"
         />
-        <Text style={styles.locationText}> Johannesburg </Text>
+        <Text style={styles.locationText}> Cape Town</Text>
         </View>
-        
 
      
           <Image
@@ -59,13 +58,14 @@ export default function Index() {
         />
         <Text style={styles.locationText}>Durban  </Text>
 
+
         <View>
         <Image
-          source={require('@/assets/images/app_images/cape town.jpg')}
+          source={require('@/assets/images/app_images/pretoria.jpg')}
           style={styles.locationImage}
           resizeMode="contain"
         />
-        <Text style={styles.locationText}> Cape Town</Text>
+        <Text style={styles.locationText}> Johannesburg </Text>
         </View>
         </View>
       
