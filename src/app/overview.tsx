@@ -41,7 +41,7 @@ export default function Index() {
 
         <View style={styles.locationRow}>
 
-         <View>
+         <View style={styles.locationCard}>
         <Image
           source={require('@/assets/images/app_images/cape town.jpg')}
           style={styles.locationImage}
@@ -51,15 +51,18 @@ export default function Index() {
         </View>
 
      
-          <Image
+          <View style={styles.locationCard}>
+            <Image
           source={require('@/assets/images/app_images/durban.jpg')}
           style={styles.locationImage}
           resizeMode="contain"
         />
         <Text style={styles.locationText}>Durban  </Text>
 
+          </View>
+          
 
-        <View>
+        <View style={styles.locationCard}>
         <Image
           source={require('@/assets/images/app_images/pretoria.jpg')}
           style={styles.locationImage}
@@ -170,7 +173,6 @@ const styles = StyleSheet.create({
     gap: 10 ,
   },
   introHeading:{
-    flex:1,
     flexShrink:1,
     fontSize: 30,
     fontWeight: "bold",
@@ -192,15 +194,19 @@ const styles = StyleSheet.create({
     width:"100%",
     flexDirection: "column",
     alignItems: 'center',
-    gap: 5,
-    marginBottom: 20,
+    gap: 15,
+    marginBottom: 10,
+  },
+  locationCard:{
+    width: "100%",
+    alignItems: "center",
+    marginBottom: 10,
   },
   locationImage:{
-    flex: 1,
-    height: 250,
+     width: "100%",
+    maxWidth: 300,
+    height: 220,
     borderRadius: 10,
-    width: 250,
-    resizeMode:"contain"
   },
   locationText:{
     flex:1,
@@ -209,6 +215,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
     color: "#354933",
+    marginTop: 8,
     lineHeight: 32,
   },
   
